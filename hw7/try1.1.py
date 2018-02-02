@@ -24,9 +24,9 @@ def word_freq(words):
                 counts[x] = 1
     return counts
 
-def values_pop(counts):
-    empty = []
-    maximum = max(counts.values())
+def values_pop(counts): #если нужно одно слово, то через сортировку словаря с выводом первого элемента; 
+    empty = [] #массив-чтобы записывать слова с одинаковой максимальной частотностью
+    maximum = max(counts.values()) 
     for key, value in counts.items():
         if value > maximum:
             maximum = value
