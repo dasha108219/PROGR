@@ -28,10 +28,7 @@ def values_pop(counts): #если нужно одно слово, то чере�
     empty = [] #массив-чтобы записывать слова с одинаковой максимальной частотностью
     maximum = max(counts.values()) 
     for key, value in counts.items():
-        if value > maximum:
-            maximum = value
-            empty.append(key)
-        elif value == maximum:
+        if value == maximum:
             empty.append(key)
     return empty
 
