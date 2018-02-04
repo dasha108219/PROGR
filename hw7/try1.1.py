@@ -7,8 +7,8 @@ print('Вариант 2', "\n")
 def get_file():
     fname = input('Введите название файла: ')
     if fname == '':
-        exit(2)
         print('Вы ввели пустую строку. Так не пойдет')
+        exit(0)
     else:
         return fname
 
