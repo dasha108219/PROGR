@@ -4,8 +4,16 @@ print('Вариант 2', "\n")
 ## с суффиксом -ness и какое существительное из них
 ## имеет максимальную частотность.
 
+def get_file():
+    fname = input('Введите название файла: ')
+    if fname == '':
+        exit(2)
+        print('Вы ввели пустую строку. Так не пойдет')
+    else:
+        return fname
+
 def words_with_ness(fname):
-    with open('1.txt', encoding = "utf-8") as file:
+    with open(fname, encoding = "utf-8") as file:
         file = file.read()
     file = file.lower()
     symbols = '.,:;!?-""'''
@@ -32,12 +40,11 @@ def values_pop(counts): #если нужно одно слово, то чере�
             empty.append(key)
     return empty
 
-words = words_with_ness('1.txt')
+fname = get_file()
+words = words_with_ness(fname)
 counts = word_freq(words)
 first = len(counts)
 second = values_pop(counts)
 
 print('Разных существительных с суффиксом -ness : ', first)
 print('Слово/слова с максимальной частотностью: ', second)
-
-
