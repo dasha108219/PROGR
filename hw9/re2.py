@@ -5,6 +5,9 @@ print('Вариант 2\n')
 import re
 
 def make_file(fname):
+    if fname == '':
+        print('Вы не ввели название файла')
+        exit(0)
     with open(fname, encoding = 'utf - 8') as file:
         file = file.read()
     file = file.lower()
