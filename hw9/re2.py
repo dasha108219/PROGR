@@ -14,6 +14,7 @@ def make_file(fname):
     symbols = '.,:;!''?-""1234567890'
     for s in symbols:
         file = file.replace(s, '')
+    file = file.replace('\n', ' ').replace('\t', ' ')
     return file
 
 def search_verbs(file):
