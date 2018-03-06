@@ -18,15 +18,15 @@ def make_file(fname):
 
 def search_verbs(file):
     all_forms = []
-    inf = re.findall('найтиc*[ь]*', file)
+    inf = re.findall('найтиc*ь* ', file)
                 # инфинитив 
-    past = re.findall('наш[ле][аило]с*[ья]*', file)
+    past = re.findall('наш[ле][аило]с*[ья]* ' , file)
                 # прошедшее время
-    fut_ger = re.findall('найд[уя]с*[ь]*[штм]*с*[ья]*[ье]*с*[ья]*', file)
-                # будущее время и деепричастие (кроме найдешь)
-    part_s = re.findall('найдеш*ь*н*[аоу]*[нйю]*[ыао]*[йяегм]*[оу]*', file)
-                # стардательные причастия + найдешь
-    part_d = re.findall('нашедш[иаеу][йяегмю][оу]*с*я*', file)
+    fut_ger = re.findall('найд[уяе]с*[ь]*[штм]*с*[ья]*[ье]*с*[ья]* ', file)
+                # будущее время и деепричастие
+    part_s = re.findall('найден[аоу]*[нйю]*[ыао]*[йяегм]*[оу]* ', file)
+                # стардательные причастия 
+    part_d = re.findall('нашедш[иаеу][йяегмю][оу]*с*я* ', file)
                 # действительные причастия
     for verb in inf:
         if verb not in all_forms:
