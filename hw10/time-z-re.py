@@ -24,8 +24,8 @@ def time_zone(file):
 def file_write(city, time):   
     with open('time_zone.txt', 'a', encoding = 'utf-8') as new_file:
         new_file.write(str(city[1]))
-        new_file.write(': ')                      # без groups(), чтобы выводилось не в скобочках, а красиво,                                                            
-        if time[2] is None:                       # и чтобы можно было работать с летним временем отдельно - выводить/не выводить
+        new_file.write(': ')                                                                                 
+        if time[2] is None:                      
             new_file.write(str(time[1]))
         else:
             new_file.write(str(time[1]))
