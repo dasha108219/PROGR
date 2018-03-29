@@ -14,7 +14,7 @@ def make_file():
 
 def replace(file):
     replace = re.sub(r'В[и́и]кинг[^үстлдв]', r'Бурундук', file)  # чтобы иностранные слова не заменялись,  
-    return replace                                                                      # так как слова типа "Викингтер" (казахский) не формы слова "викинг"
+    return replace                                              # так как слова типа "Викингтер" (казахский) не формы слова "викинг"
 
 def replace_sec(replace):
     replace_sec= re.sub(r'викинг', r'бурундук', replace)
