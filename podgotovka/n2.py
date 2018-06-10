@@ -17,10 +17,7 @@ def write_f(dic):
     with open('new2.txt', 'w', encoding = 'utf-8') as file:
         file.write('Часть речи - Количество\n\n')
         for key, value in dic.items():
-            file.write(str(key))
-            file.write('\t')
-            file.write(str(value))
-            file.write('\n')
+            file.write(str(key)+'\t'+str(value)+'\n')
     return file
 
 f= read_f()
