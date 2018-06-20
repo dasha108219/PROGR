@@ -17,7 +17,7 @@ def texts():
                 for s in bigr:
                     bi = re.search('([а-яА-Я0-9]+)</w>\n<w><ana lex=".+" gr="S,.+,gen"></ana>(\w+)', s)
                     with open('table.csv', 'w', encoding='cp1251') as f:
-                        f.write(str(doc.groups(0))+';'+str(bi)+';'+str(topic.groups(0))+'\n')
+                        f.write(str(doc.groups(0))+';'+str(bi.groups(0))+';'+str(topic.groups(0))+'\n')
     return f
         
 
